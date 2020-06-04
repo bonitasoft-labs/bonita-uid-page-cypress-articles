@@ -27,7 +27,7 @@ class BonitaPagePlugin implements Plugin<Project> {
         project.tasks.npm_install.configure {
             group 'Bonita'
             description 'Install node moodule for this project'
-            inputs.files('package.json', 'package-lock.json')
+            inputs.files('package.json')
             outputs.dirs('node_modules')
         }
 
@@ -35,7 +35,7 @@ class BonitaPagePlugin implements Plugin<Project> {
             group 'Bonita'
             description 'Build a ZIP which contains an custom-page to be imported in living application'
             args = ['run', 'build:only']
-            inputs.files('package.json', 'package-lock.json')
+            inputs.files('package.json')
             inputs.dir('src')
             inputs.dir('resources')
             outputs.dirs({extension.frontendBuildDir})
