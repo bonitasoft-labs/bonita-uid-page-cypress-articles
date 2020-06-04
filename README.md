@@ -1,6 +1,6 @@
 # Bonita UI Designer page cypress test
 
-This repo
+This repository contains a page that lets you create a new user as well as tests for that page.
 
 # Build
 
@@ -13,16 +13,18 @@ This repo
   
 ## Gradle Tasks
 
+For each gradlew command that follows, use gradlew.bat if you are using Windows
+
 ### Build artifacts
 
-``gradle build``
+``gradlew build``
 
 ### UI Designer pages development
 
 You can start a UI Designer development environment using
 
-``gradle runUID``
+``gradlew runUID``
 
 project property can specify where bonita is located and the credentials to log in with.
 
-``gradle runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``
+``gradlew runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``

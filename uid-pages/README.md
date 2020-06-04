@@ -1,9 +1,11 @@
 
 # Gradle tasks for UI designer artifacts
 
+For each gradlew command that follows, use gradlew.bat if you are using Windows
+
 ## Build the artifact
 
-``gradle buildUIDPage``
+``gradlew buildUIDPage``
 
 it produces the artifact in the **build/** directory under the name **projectname**-version.zip
 
@@ -11,17 +13,17 @@ it produces the artifact in the **build/** directory under the name **projectnam
 
 You can start an UID dev environment using
 
-``gradle runUID`` (From the project root directory)
+``gradlew runUID`` (From the project root directory)
 
 project properties can be used to specify where bonita is located and the credentials to log in with.
 
-``gradle runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``
+``gradlew runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``
 
 ## Page migration
 
 Migrate a page to the specified UID version using
 
-``gradle migrateUIDPage``
+``gradlew migrateUIDPage``
 
 ## Tests
 
