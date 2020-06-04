@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+include 'uid-pages:page-with-registration-form'
+
+rootProject.name = 'bonita-uid-page-cypress-test'

@@ -1,0 +1,16 @@
+{
+  "firstname": "Walter",
+  "icon": "icons/default/icon_user.png",
+  "creation_date": "2020-06-04 11:46:58.952",
+  "userName": "walter.bates",
+  "title": "",
+  "created_by_user_id": "4",
+  "enabled": "true",
+  "lastname": "Bates",
+  "last_connection": "",
+  "password": "",
+  "manager_id": "0",
+  "id": "201",
+  "job_title": "",
+  "last_update_date": "2020-06-04 11:46:58.952"
+}

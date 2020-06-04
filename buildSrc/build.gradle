@@ -1,0 +1,9 @@
+repositories {
+    mavenLocal()
+    maven { url 'https://plugins.gradle.org/m2/' }
+    gradlePluginPortal() // because we depends on gradle plugin for compilation
+}
+
+dependencies {
+    compile 'com.moowork.gradle:gradle-node-plugin:1.2.0'
+}
