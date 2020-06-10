@@ -7,9 +7,14 @@ This repository contains a page that lets you create a new user as well as tests
 ## Requirements
 
 * Java 8
-* UI Designer is used to build the pages. It must be installed in your local maven repository prior to building bonita-web-pages
-  * look at the build.gradle file to know which UI Designer is required to build the page
-  * install the UI Designer as described in the [UI Designer repository](https://github.com/bonitasoft/bonita-ui-designer)
+* Git
+* UI Designer version 1.11.38 is used to build the pages. It must be installed in your local maven repository prior to building bonita-web-pages
+
+To install UI Designer version 1.11.38:
+* Clone the repository: git clone https://github.com/bonitasoft/bonita-ui-designer
+* Fetch all the branches and tags: git fetch --all --tags
+* Checkout the tag: git checkout tags/1.11.38 -b 1.11.38-branch
+* Build UI Designer: ./mvnw clean install on Linux or ./mvnw.bat clean install on Windows
   
 ## Gradle Tasks
 
@@ -17,14 +22,18 @@ For each gradlew command that follows, use gradlew.bat if you are using Windows
 
 ### Build artifacts
 
-``gradlew build``
+``./gradlew build``
+
+### Build artifacts and test them
+
+``./gradlew clean build runIntegrationTests``
 
 ### UI Designer pages development
 
 You can start a UI Designer development environment using
 
-``gradlew runUID``
+``./gradlew runUID``
 
 project property can specify where bonita is located and the credentials to log in with.
 
-``gradlew runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``
+``./gradlew runUID -PbonitaUrl=http://localhost:8080 -PbonitaUser=walter.bates -PbonitaPassword=bpm``
