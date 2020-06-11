@@ -14,7 +14,7 @@ To install UI Designer version 1.11.38:
 * Clone the repository: git clone https://github.com/bonitasoft/bonita-ui-designer
 * Fetch all the branches and tags: git fetch --all --tags
 * Checkout the tag: git checkout tags/1.11.38 -b 1.11.38-branch
-* Build UI Designer: ./mvnw clean install on Linux or ./mvnw.bat clean install on Windows
+* Build UI Designer: ./mvnw clean install on Linux or ./mvnw.cmd clean install on Windows
   
 ## Gradle Tasks
 
