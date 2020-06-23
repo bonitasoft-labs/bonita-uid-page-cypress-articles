@@ -1,8 +1,8 @@
-# How to test a UI Designer page using Cypress
+# How to test an UI Designer page using Cypress
 
 It is not enough to make an UI Designer page, testing it is very important as well. 
-For this reason, our team decided to move towards an e2e framework that will let us have a fast way to set up and test the pages. 
-We decided to use [Cypress](https://www.cypress.io/), an open-source, javascript framework that lets you write Given-When-Then semi-structured tests.
+For this reason, our team decided to move towards an e2e framework that is fast to set up and allows us to write tests efficiently. 
+We decided to use [Cypress](https://www.cypress.io/), a open-source, javascript framework that lets you write Given-When-Then semi-structured tests.
 
 In this article I will go over an UI Designer page that lets you create a user and two tests that were made for the page. 
 You can find all of these in this [github](https://github.com/bonitasoft-labs/bonita-uid-page-cypress-test) repository. 
@@ -18,7 +18,9 @@ We usually use this feature in order to mimic a toast and thus not clog the user
 ##The test choices
 Without further ado, let’s talk about tests. 
 Cypress tests are made from two distinct parts. 
-The first is about writing the test scenarios in one file and the second is about explaining with code what each line of the scenario will do. 
+The first is about writing the test scenarios in one file and the second is about explaining with code what each line of the scenario will do.
+The cypress-cucumber-preprocessor library is used in order to write scenarios in the Given-when-then style.
+
 The two tests that I am going to talk about are :
 - A failure in the creation of the user because the passwords don’t match
 - The loader being displayed while the user is being created
@@ -88,7 +90,7 @@ When I wait for 5000 delay
 Then I see the message about "User successfully created."
 And The loader is not shown
 ```
-As you can see, some parts of this test are the same as the first one. The main things that are different are the definition of the API mock, checking that the loader is shown, waiting for 5 seconds and checking the end-state of the page.
+As you can see, some parts of this test are the same as in the first test. The main things that are different are the definition of the API mock, checking that the loader is shown, waiting for 5 seconds and checking the end-state of the page.
 Mocking the API response after 5 seconds lets us have a moment during which the response has not arrived from the user API and thus the loading would be shown.
 The response is the same as the one that you would get from the Portal, which lets us be very close to reality.
 ```code
@@ -116,4 +118,4 @@ cy.contains("p", "Creating user.").should("not.be.visible");
 ```
 
 As you can see, these tests don't take a long time to write and can be very powerful. 
-Awesome! Now you know how to test a form with Cypress! You can also check our [web-pages project](https://github.com/bonitasoft/bonita-web-pages) containing pages that we are currently developing.
+Awesome! Now you know how to test a UI Designer page with Cypress! You can also check our [web-pages project](https://github.com/bonitasoft/bonita-web-pages/uid-pages) containing pages that we are currently developing.
