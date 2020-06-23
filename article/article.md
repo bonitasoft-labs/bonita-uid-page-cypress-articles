@@ -15,7 +15,8 @@ There is also a hidden functionality that makes the success or error messages di
 We usually use this feature in order to mimic a toast and thus not clog the user's screen.
 ![page structure](images/page.jpg)
 
-##The test choices
+## The test choices
+
 Without further ado, let’s talk about tests. 
 Cypress tests are made from two distinct parts. 
 The first is about writing the test scenarios in one file and the second is about explaining with code what each line of the scenario will do.
@@ -29,6 +30,7 @@ I chose the first because it is a test that we have done and redone multiple tim
 The second was chosen because it depicts an use-case that seemed pretty interesting to me, and also because the building blocks of the scenario might be useful in a variety of situations, as, for example, the test for checking if the message disappears after three seconds.
 
 ## Testing user creation failure because the password is not the same
+
 Let’s talk about the first test scenario. 
 ```code 
 Given The server is started
@@ -78,6 +80,7 @@ After launching the test runner, we can see that the test is executed and is suc
 ![test passwords not matching](images/test_passwords_dont_match.jpg)
 
 ## Testing the loader being displayed while the user is being created
+
 The scenario for this test is based on the display of a loader and checking that it disappears after five seconds.
 ```code
 Given The server is started
@@ -117,5 +120,6 @@ cy.get(".glyphicon.glyphicon-cog.gly-spin").should("not.be.visible");
 cy.contains("p", "Creating user.").should("not.be.visible");
 ```
 
+<br/>
 As you can see, these tests don't take a long time to write and can be very powerful. 
 Awesome! Now you know how to test a UI Designer page with Cypress! You can also check our [web-pages project](https://github.com/bonitasoft/bonita-web-pages/uid-pages) containing pages that we are currently developing.
