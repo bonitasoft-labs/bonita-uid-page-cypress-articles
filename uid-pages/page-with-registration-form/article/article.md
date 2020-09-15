@@ -122,4 +122,5 @@ cy.contains("p", "Creating user.").should("not.be.visible");
 
 <br/>
 As you can see, these tests don't take a long time to write and can be very powerful. 
-Awesome! Now you know how to test a UI Designer page with Cypress! You can also check our [web-pages project](https://github.com/bonitasoft/bonita-web-pages/tree/master/uid-pages) containing pages that we are currently developing.
+Awesome! Now you know how to test a UI Designer page with Cypress! You can also check our 
+[web-pages-project](https://github.com/bonitasoft/bonita-web-pages/tree/master/uid-pages) containing pages that we are currently developing.
